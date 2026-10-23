@@ -1,6 +1,7 @@
 python-telegram-bot
 yfinance
+Flask
 pandas
 lxml
-multitasking
 peewee
+multitasking
