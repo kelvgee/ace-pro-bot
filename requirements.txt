@@ -1,7 +1,2 @@
-python-telegram-bot
-yfinance
-Flask
-pandas
-lxml
-peewee
-multitasking
+websockets
+tzdata
