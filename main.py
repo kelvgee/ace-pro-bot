@@ -29,8 +29,9 @@ def load_secret(env_name, file_name):
 # key -> Deriv symbol, label, payout % you see in Pocket Option (edit here, or change live with /payout), pip size
 PAIRS = {
     "EURUSD": {"deriv": "frxEURUSD", "label": "EUR/USD", "payout": 92, "pip": 0.0001},
-    "CADJPY": {"deriv": "frxCADJPY", "label": "CAD/JPY", "payout": 82, "pip": 0.01},
-    "CHFJPY": {"deriv": "frxCHFJPY", "label": "CHF/JPY", "payout": 81, "pip": 0.01},
+    # CAD/JPY and CHF/JPY switched off: Deriv returned no data for them. To bring them back, remove the leading # on both lines.
+    # "CADJPY": {"deriv": "frxCADJPY", "label": "CAD/JPY", "payout": 82, "pip": 0.01},
+    # "CHFJPY": {"deriv": "frxCHFJPY", "label": "CHF/JPY", "payout": 81, "pip": 0.01},
     "AUDJPY": {"deriv": "frxAUDJPY", "label": "AUD/JPY", "payout": 78, "pip": 0.01},
     "USDJPY": {"deriv": "frxUSDJPY", "label": "USD/JPY", "payout": 78, "pip": 0.01},
 }
@@ -49,7 +50,7 @@ CONFIG = {
     "WEEKDAYS_ONLY": True,
     "CONNECT_LEAD_MIN": 2,
     # ---------- signal rules ----------
-    "MIN_PAYOUT_PCT": 80,                  # pairs whose payout (PAIRS / /payout) is below this are skipped
+    "MIN_PAYOUT_PCT": 70,                # pairs whose payout (PAIRS / /payout) is below this are skipped
     "MAX_SIGNALS_PER_CANDLE": 1,           # best pair only when several qualify
     "PAIR_COOLDOWN_MIN": 15,
     "MAX_SIGNALS_PER_DAY": 12,
